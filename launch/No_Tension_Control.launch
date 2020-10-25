@@ -1,0 +1,30 @@
+<launch>
+
+  <arg name="record" default="false"/>
+  <arg name="rqt" default="false"/>
+  <node name="serial_node"        pkg="rosserial_python"      type="serial_node.py">
+    <param name="port"              type="string"               value="/dev/ttyACM0"/>
+    <param name="baud"              type="int"                  value="57600"/>
+    </node>
+  <node name="serial_node2"        pkg="rosserial_python"      type="serial_node.py">
+    <param name="port"              type="string"               value="/dev/ttyACM1"/>
+    <param name="baud"              type="int"                  value="57600"/>
+    </node>
+  <node name="serial_node3"        pkg="rosserial_python"      type="serial_node.py">
+    <param name="port"              type="string"               value="/dev/ttyACM2"/>
+    <param name="baud"              type="int"                  value="57600"/>
+    </node>
+
+    <group if="$(arg rqt)">
+        <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui"/>
+    </group>
+
+
+    <group if="$(arg record)">
+        <node pkg="rosbag" type="record" name="my_rosbag" output="screen" args="-a -o $(find doc_ock)/bags/"/>
+    </group>
+
+  <node name="String_Length_PID" pkg="doc_ock" type="String_Length_PID.py" />
+  <node name="Mimic" pkg="doc_ock" type="Mimic.py" />
+</launch>
+
