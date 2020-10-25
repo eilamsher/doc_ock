@@ -2,7 +2,7 @@
 
 by Eilam Sher
 
-<img src="https://images-na.ssl-images-amazon.com/images/I/71xbLEF1M%2BL._AC_SL1500_.jpg" width="750" height="500" />
+<img src="https://images-na.ssl-images-amazon.com/images/I/71xbLEF1M%2BL._AC_SL1500_.jpg" width="375" height="250" />
 
 [![Hyper redundant tendon string actuated robotic arm](https://img.youtube.com/vi/ZYZaRA9Z6xE/0.jpg)](https://www.youtube.com/watch?v=ZYZaRA9Z6xE "Hyper redundant tendon string actuated robotic arm")
 
